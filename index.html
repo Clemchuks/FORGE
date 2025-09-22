@@ -94,7 +94,7 @@
     display: inline-block;
     background: var(--green-600);
     color: #fff;
-    font-size: 11px;
+    font-size: 10px;
     line-height: 1;
     padding: 2px 6px;
     border-radius: 999px;
@@ -115,8 +115,8 @@
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;   /* momentum scroll on iOS */
   overscroll-behavior-x: contain;      /* prevent parent scroll chaining */
-  gap: 8px;                            /* compact default gap */
-  padding: 0 4px 6px;                  /* slight breathing room */
+  gap: 6px;                            /* compact default gap */
+  padding: 0 2px 4px;                  /* slight breathing room */
 }
 
 /* Keep each bar column from shrinking or stretching */
@@ -137,14 +137,35 @@
 #hf-bars2 .row::-webkit-scrollbar-track{ background: transparent; }
 
 
+/* Smaller label text on mobile */
+@media (max-width: 640px){
+  #hf-bars2 .label{
+    font-size: 11px;     /* was ~12–14px */
+    line-height: 1.1;
+  }
+}
+
+/* Extra-small phones */
+@media (max-width: 400px){
+  #hf-bars2 .label{
+    font-size: 10px;
+  }
+}
+
+/* Very narrow screens */
+@media (max-width: 340px){
+  #hf-bars2 .label{
+    font-size: 9px;
+  }
+}
 
   /* Mobile responsiveness for bar size */
   @media (max-width: 640px){ #hf-bars2 .bar-outer{ height:200px!important; width:60px!important; } }
   @media (max-width: 400px){ #hf-bars2 .bar-outer{ height:180px!important; width:40px!important; } }
   @media (max-width: 300px){ #hf-bars2 .bar-outer{ height:150px!important; width:30px!important; } }
-  @media (max-width: 250px){ #hf-bars2 .bar-outer{ width:25px!important; height:100px!important; } }
-  @media (max-width: 230px){ #hf-bars2 .bar-outer{ width:20px!important; height:100px!important; } }
-  @media (max-width: 190px){ #hf-bars2 .bar-outer{ width:16px!important; height:100px!important; } }
+  @media (max-width: 250px){ #hf-bars2 .bar-outer{ width:25px!important; height:90px!important; } }
+  @media (max-width: 230px){ #hf-bars2 .bar-outer{ width:20px!important; height:90px!important; } }
+  @media (max-width: 190px){ #hf-bars2 .bar-outer{ width:16px!important; height:90px!important; } }
 </style>
 
 <div id="hf-bars2" class="main_container">
