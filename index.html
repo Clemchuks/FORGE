@@ -107,65 +107,15 @@
     background: var(--green-600);
     margin: 6px auto 0;
   }
-  /* ==== Keep bars on one row (mobile), enable smooth horizontal scroll ==== */
-#hf-bars2 .row{
-  display:flex;
-  flex-wrap: nowrap !important;       /* never wrap to next line */
-  overflow-x: auto;                    /* allow sideways scroll if needed */
-  overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;   /* momentum scroll on iOS */
-  overscroll-behavior-x: contain;      /* prevent parent scroll chaining */
-  gap: 6px;                            /* compact default gap */
-  padding: 0 2px 4px;                  /* slight breathing room */
-}
 
-/* Keep each bar column from shrinking or stretching */
-#hf-bars2 .col{
-  flex: 0 0 auto !important;           /* fixed-width columns in a row */
-  align-items: center;
-}
-
-/* Tighten mobile spacing and labels */
-@media (max-width: 480px){
-  #hf-bars2 .label{ font-size: 11px; margin-top: 4px; }
-  #hf-bars2 .row{ gap: 6px; padding-bottom: 4px; }
-}
-
-/* Optional: subtle scrollbar styling (won't affect layout) */
-#hf-bars2 .row::-webkit-scrollbar{ height: 6px; }
-#hf-bars2 .row::-webkit-scrollbar-thumb{ background: #d1d5db; border-radius: 999px; }
-#hf-bars2 .row::-webkit-scrollbar-track{ background: transparent; }
-
-
-/* Smaller label text on mobile */
-@media (max-width: 640px){
-  #hf-bars2 .label{
-    font-size: 11px;     /* was ~12–14px */
-    line-height: 1.1;
-  }
-}
-
-/* Extra-small phones */
-@media (max-width: 400px){
-  #hf-bars2 .label{
-    font-size: 10px;
-  }
-}
-
-/* Very narrow screens */
-@media (max-width: 340px){
-  #hf-bars2 .label{
-    font-size: 9px;
-  }
-}
 
   /* Mobile responsiveness for bar size */
-  @media (max-width: 640px){ #hf-bars2 .bar-outer{ height:200px!important; width:60px!important; } }
-  @media (max-width: 400px){ #hf-bars2 .bar-outer{ height:180px!important; width:40px!important; } }
-  @media (max-width: 300px){ #hf-bars2 .bar-outer{ height:150px!important; width:25px!important; } }
-  @media (max-width: 250px){ #hf-bars2 .bar-outer{ width:18px!important; height:90px!important; } }
-  @media (max-width: 230px){ #hf-bars2 .bar-outer{ width:16px!important; height:90px!important; } }
-  @media (max-width: 190px){ #hf-bars2 .bar-outer{ width:12px!important; height:90px!important; } }
+  @media (max-width: 640px){ #hf-bars2 .bar-outer{ height:200px!important; width:50px!important; } }
+  @media (max-width: 400px){ #hf-bars2 .bar-outer{ height:180px!important; width:30px!important; } }
+  @media (max-width: 300px){ #hf-bars2 .bar-outer{ height:150px!important; width:18px!important; } }
+  @media (max-width: 250px){ #hf-bars2 .bar-outer{ width:12px!important; height:90px!important; } }
+  @media (max-width: 230px){ #hf-bars2 .bar-outer{ width:10px!important; height:90px!important; } }
+  @media (max-width: 190px){ #hf-bars2 .bar-outer{ width:8px!important; height:90px!important; } }
 </style>
 
 <div id="hf-bars2" class="main_container">
